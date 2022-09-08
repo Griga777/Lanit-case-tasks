@@ -8,6 +8,9 @@ public class Main {
         System.out.println("======================");
         System.out.println(Task3.permutation("я люблю пиво!", "пиво люблю я!"));
         System.out.println("======================");
+        Task4.outputWordOrNumber(91);
+        System.out.println("======================");
         Task7.calculateSumDigitsThreeDigitNumber(159);
+        System.out.println("======================");
     }
 }
