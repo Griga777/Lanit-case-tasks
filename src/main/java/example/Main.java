@@ -10,7 +10,7 @@ public class Main {
         System.out.println("======================");
         Task4.outputWordOrNumber(91);
         System.out.println("======================");
-        int[] numbers = {12, 10, 8};
+        int[] numbers = {12, 22, 8};
         System.out.println(Task5.returnNearestNumber(numbers));
         System.out.println("======================");
         Task7.calculateSumDigitsThreeDigitNumber(159);

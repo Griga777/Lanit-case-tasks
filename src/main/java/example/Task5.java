@@ -5,11 +5,12 @@ package example;
 public class Task5 {
     public static int returnNearestNumber(int[] numbers) {
         int min = Integer.MAX_VALUE;
-        int nearestNumber = 10;
+        int desiredNumber = 10;
+        int nearestNumber = 0;
 
         for (Integer number : numbers) {
-            final int diff = Math.abs(number - nearestNumber);
-            if (diff < min) {
+            int diff = Math.abs(desiredNumber - number);
+            if (diff <= min) {
                 min = diff;
                 nearestNumber = number;
             }
