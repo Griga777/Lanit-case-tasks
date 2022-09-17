@@ -10,15 +10,14 @@ public class Task5 {
     public static int returnNearestNumber(int[] numbers) {
         int min = Integer.MAX_VALUE;
         int desiredNumber = 10;
-        List<Integer> nearestNumber = null;
 
-        for (int number : numbers) {
+        List<Integer> nearestNumber = new ArrayList<>();
+        for (Integer number : numbers) {
             int diff = Math.abs(desiredNumber - number);
             if (diff <= min) {
                 min = diff;
+                nearestNumber.add(number);
             }
-            nearestNumber = new ArrayList<>();
-            nearestNumber.add(number);
         }
         return Collections.max(nearestNumber);
     }
