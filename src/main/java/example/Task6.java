@@ -5,6 +5,12 @@ package example;
 //Пример: "Это новый тест" -> "Это йывон тест"
 public class Task6 {
     public static String returnModifiedString(String s) {
-        return s;
+        String[] words = new StringBuilder(s).reverse().toString().split(" ");
+        StringBuilder newStr = new StringBuilder();
+        for (int i = words.length - 1; i >= 0; i--) {
+            newStr.append(words[i]).append(" ");
+        }
+        return newStr.toString();
     }
 }
+
