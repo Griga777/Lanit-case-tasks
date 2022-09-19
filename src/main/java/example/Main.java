@@ -13,7 +13,7 @@ public class Main {
         int[] numbers = {8, 22, 12};
         System.out.println(Task5.returnNearestNumber(numbers));
         System.out.println("======================");
-        System.out.println(Task6.returnModifiedString("Это новый тест"));
+        System.out.println(Task6.returnModifiedString("Это новый тестик"));
         System.out.println("======================");
         Task7.calculateSumDigitsThreeDigitNumber(159);
         System.out.println("======================");
