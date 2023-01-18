@@ -12,10 +12,10 @@ public class Task5 {
         int desiredNumber = 10;
 
         List<Integer> nearestNumber = new ArrayList<>();
-        for (Integer number : numbers) {
-            int diff = Math.abs(desiredNumber - number);
-            if (diff <= min) {
-                min = diff;
+        for (Integer number : numbers) {  // numbers: {8, 22, 12}
+            int diff = Math.abs(desiredNumber - number);  // diff = desiredNumber(10) - number(8) = 2
+            if (diff <= min) {  // diff(2) <= min(2147483647) true
+                min = diff;  // min = 2
                 nearestNumber.add(number);
             }
         }

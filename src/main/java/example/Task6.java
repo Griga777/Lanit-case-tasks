@@ -17,9 +17,7 @@ public class Task6 {
                 newStr.append(word).append(" ");
             }
         }
-        int lastIndex = newStr.lastIndexOf(" ");
-        newStr.deleteCharAt(lastIndex);
-        return newStr.toString();
+        return newStr.toString().trim();
     }
 }
 
