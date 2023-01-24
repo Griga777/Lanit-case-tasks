@@ -2,7 +2,7 @@ package example;
 
 public class Main {
     public static void main(String[] args) {
-        Task1.findMaximumValueOfTwoNumbers(-5, -7);
+        System.out.println(Task1.findMaximumValueOfTwoNumbers(-5, -7));
         System.out.println("======================");
 
         Task2.swapValues(-9, 9);
