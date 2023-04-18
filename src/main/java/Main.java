@@ -1,8 +1,9 @@
-package example;
+import example.*;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(Task1.findMaximumValueOfTwoNumbers(-5, -7));
+        String[] numbers = {"-5.0", "-7.0"};
+        System.out.println(Task1.findMaximumValueOfTwoNumbers(numbers));
         System.out.println("======================");
 
         Task2.swapValues(-9, 9);
@@ -14,8 +15,8 @@ public class Main {
         Task4.outputWordOrNumber(10);
         System.out.println("======================");
 
-        int[] numbers = {8, 22, 12};
-        System.out.println(Task5.returnNearestNumber(numbers));
+        int[] values = {8, 22, 12};
+        System.out.println(Task5.returnNearestNumber(values));
         System.out.println("======================");
 
         System.out.println(Task6.returnModifiedString("Это новый тестик"));
