@@ -2,13 +2,27 @@ package example;
 
 //Напишите функцию, меняющую местами значения переменных, не используя временные переменные.
 public class Task2 {
-    public static void swapValues(int a, int b) {
+    public static String[] swapValues(String[] numbers) {
+        double a;
+        double b;
+
+        if (numbers[0].equals("") || numbers[1].equals("")) {
+            throw new TasksException("Числа не должны быть пустыми");
+        }
+        try {
+            a = Double.parseDouble(numbers[0]);
+            b = Double.parseDouble(numbers[1]);
+        } catch (NumberFormatException e) {
+            throw new TasksException("Введенные значения не являются числом", e);
+        }
+        if (a > Integer.MAX_VALUE || a < Integer.MIN_VALUE || b > Integer.MAX_VALUE || b < Integer.MIN_VALUE) {
+            throw new TasksException("Превышен порог значений");
+        }
+
         // Пример для a = 9, b = 4
         a = a - b; // a = 9 - 4 = 5 - разница м/у 9 и 4
         b = a + b; // b = 5 + 4 = 9
         a = b - a; // a = 9 - 5 = 4
-
-        System.out.println("a: " + a);
-        System.out.println("b: " + b);
+        return new String[]{String.valueOf(a), String.valueOf(b)};
     }
 }

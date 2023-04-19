@@ -1,12 +1,15 @@
 import example.*;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         String[] numbers = {"-5.0", "-7.0"};
         System.out.println(Task1.findMaximumValueOfTwoNumbers(numbers));
         System.out.println("======================");
 
-        Task2.swapValues(-9, 9);
+        String[] numbers1 = {"-9.0", "9.0"};
+        System.out.println(Arrays.toString(Task2.swapValues(numbers1)));
         System.out.println("======================");
 
         System.out.println(Task3.permutation("я люблю пиво!", "пиво люблю я!"));
