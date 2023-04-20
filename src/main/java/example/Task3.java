@@ -12,6 +12,12 @@ public class Task3 {
     }
 
     public static boolean permutation(String s, String t) {
+        if (s.equals("") || t.equals("")) {
+            throw new TasksException("Строки не должны быть пустыми");
+        }
+        if (s.equals(t)) {
+            return false;
+        }
         if (s.length() != t.length()) {
             return false;
         }

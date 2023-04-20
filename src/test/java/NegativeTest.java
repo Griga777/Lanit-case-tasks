@@ -1,7 +1,11 @@
 import example.Task1;
+import example.Task2;
+import example.Task3;
 import example.TasksException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.io.IOException;
 
 public class NegativeTest {
 
@@ -21,5 +25,36 @@ public class NegativeTest {
     void negativeTestForTask1(String number1, String number2) {
         String[] numbers = {number1, number2};
         Task1.findMaximumValueOfTwoNumbers(numbers);
+    }
+
+    @DataProvider
+    public Object[][] negativeDataForTask2() {
+        return new Object[][]{
+                {"", "-85"},
+                {"157", ""},
+                {"#", "999"},
+                {"-5", "five"},
+                {"2147483648", "54"},
+                {"-11", "-2147483649"}
+        };
+    }
+
+    @Test(dataProvider = "negativeDataForTask2", expectedExceptions = TasksException.class)
+    void negativeTestForTask2(String number1, String number2) {
+        String[] numbers = {number1, number2};
+        Task2.swapValues(numbers);
+    }
+
+    @DataProvider
+    public Object[][] negativeDataForTask3() {
+        return new Object[][]{
+                {"", "я люблю пиво!"},
+                {"1234567890", 1234567890}
+        };
+    }
+
+    @Test(dataProvider = "negativeDataForTask3", expectedExceptions = TasksException.class)
+    void negativeTestForTask3(String s, String t) {
+        Task3.permutation(s, t);
     }
 }

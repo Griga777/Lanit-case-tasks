@@ -8,7 +8,7 @@ public class Main {
         System.out.println(Task1.findMaximumValueOfTwoNumbers(numbers));
         System.out.println("======================");
 
-        String[] numbers1 = {"-9.0", "9.0"};
+        String[] numbers1 = {"-9", "9"};
         System.out.println(Arrays.toString(Task2.swapValues(numbers1)));
         System.out.println("======================");
 

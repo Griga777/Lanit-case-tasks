@@ -3,15 +3,15 @@ package example;
 //Напишите функцию, меняющую местами значения переменных, не используя временные переменные.
 public class Task2 {
     public static String[] swapValues(String[] numbers) {
-        double a;
-        double b;
+        int a;
+        int b;
 
         if (numbers[0].equals("") || numbers[1].equals("")) {
             throw new TasksException("Числа не должны быть пустыми");
         }
         try {
-            a = Double.parseDouble(numbers[0]);
-            b = Double.parseDouble(numbers[1]);
+            a = Integer.parseInt(numbers[0]);
+            b = Integer.parseInt(numbers[1]);
         } catch (NumberFormatException e) {
             throw new TasksException("Введенные значения не являются числом", e);
         }
