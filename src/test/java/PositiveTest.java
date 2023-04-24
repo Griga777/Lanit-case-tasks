@@ -55,7 +55,6 @@ public class PositiveTest {
     public Object[][] positiveDataForTask3() {
         return new Object[][]{
                 {"я люблю пиво!", "пиво люблю я!", true},
-                {"я люблю пиво!", "я люблю пиво!", false},
                 {"я люблю играть в футбол!", "я играю в футбол с друзьями", false},
                 {"::%№!)?*//+;_(%$~&^)", "::%^!(?*//+;_)%$~&)№", true}
         };

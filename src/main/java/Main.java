@@ -15,7 +15,7 @@ public class Main {
         System.out.println(Task3.permutation("я люблю пиво!", "пиво люблю я!"));
         System.out.println("======================");
 
-        Task4.outputWordOrNumber(10);
+        Task4.outputWordOrNumber("10");
         System.out.println("======================");
 
         int[] values = {8, 22, 12};

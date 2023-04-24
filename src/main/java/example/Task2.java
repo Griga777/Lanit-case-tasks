@@ -15,7 +15,7 @@ public class Task2 {
         } catch (NumberFormatException e) {
             throw new TasksException("Введенные значения не являются числом", e);
         }
-        if (a > Integer.MAX_VALUE || a < Integer.MIN_VALUE || b > Integer.MAX_VALUE || b < Integer.MIN_VALUE) {
+        if (a > Double.MAX_VALUE || a < Double.MIN_VALUE || b > Double.MAX_VALUE || b < Double.MIN_VALUE) {
             throw new TasksException("Превышен порог значений");
         }
 

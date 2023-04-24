@@ -49,7 +49,7 @@ public class NegativeTest {
     public Object[][] negativeDataForTask3() {
         return new Object[][]{
                 {"", "я люблю пиво!"},
-                {"1234567890", 1234567890}
+                {"одинаковая строка", "одинаковая строка"}
         };
     }
 

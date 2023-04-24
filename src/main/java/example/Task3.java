@@ -16,7 +16,7 @@ public class Task3 {
             throw new TasksException("Строки не должны быть пустыми");
         }
         if (s.equals(t)) {
-            return false;
+            throw new TasksException("Строки не должны быть одинаковыми");
         }
         if (s.length() != t.length()) {
             return false;
