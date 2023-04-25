@@ -1,6 +1,7 @@
 import example.Task1;
 import example.Task2;
 import example.Task3;
+import example.Task4;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -63,6 +64,19 @@ public class PositiveTest {
     @Test(dataProvider = "positiveDataForTask3")
     void positiveTestForTask3(String s, String t, boolean resultProvider) {
         Boolean result = Task3.permutation(s, t);
+        Assert.assertEquals(result, resultProvider);
+    }
+
+    @DataProvider
+    public Object[][] positiveDataForTask4() {
+        return new Object[][]{
+                {"10", "bar"}
+        };
+    }
+
+    @Test(dataProvider = "positiveDataForTask4")
+    void positiveTestForTask4(String number, String resultProvider) {
+        String result = Task4.outputWordOrNumber(number);
         Assert.assertEquals(result, resultProvider);
     }
 }
