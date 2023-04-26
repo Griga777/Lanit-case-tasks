@@ -1,7 +1,4 @@
-import example.Task1;
-import example.Task2;
-import example.Task3;
-import example.Task4;
+import example.*;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -70,13 +67,46 @@ public class PositiveTest {
     @DataProvider
     public Object[][] positiveDataForTask4() {
         return new Object[][]{
-                {"10", "bar"}
+                {"-1", "-1"},
+                {"0", "foobar"},
+                {"1", "1"},
+                {"-2147483648", "-2147483648"},
+                {"-2147483647", "-2147483647"},
+                {"2147483646", "foo"},
+                {"2147483647", "2147483647"},
+                {"-225", "foobar"},
+                {"9", "foo"},
+                {"1550", "bar"},
+                {"-17", "-17"}
         };
     }
 
     @Test(dataProvider = "positiveDataForTask4")
     void positiveTestForTask4(String number, String resultProvider) {
         String result = Task4.outputWordOrNumber(number);
+        Assert.assertEquals(result, resultProvider);
+    }
+
+    @DataProvider
+    public Object[][] positiveDataForTask5() {
+        return new Object[][]{
+                {new Integer[]{8, 22, 12}, 12},
+                {"0", "foobar"},
+                {"1", "1"},
+                {"-2147483648", "-2147483648"},
+                {"-2147483647", "-2147483647"},
+                {"2147483646", "foo"},
+                {"2147483647", "2147483647"},
+                {"-225", "foobar"},
+                {"9", "foo"},
+                {"1550", "bar"},
+                {"-17", "-17"}
+        };
+    }
+
+    @Test(dataProvider = "positiveDataForTask5")
+    void positiveTestForTask5(Integer[] numbers, int resultProvider) {
+        Integer result = Task5.returnNearestNumber(numbers);
         Assert.assertEquals(result, resultProvider);
     }
 }

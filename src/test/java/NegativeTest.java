@@ -1,7 +1,4 @@
-import example.Task1;
-import example.Task2;
-import example.Task3;
-import example.TasksException;
+import example.*;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -56,5 +53,21 @@ public class NegativeTest {
     @Test(dataProvider = "negativeDataForTask3", expectedExceptions = TasksException.class)
     void negativeTestForTask3(String s, String t) {
         Task3.permutation(s, t);
+    }
+
+    @DataProvider
+    public Object[][] negativeDataForTask4() {
+        return new Object[][]{
+                {""},
+                {"один"},
+                {"-five"},
+                {"2147483648"},
+                {"-2147483649"}
+        };
+    }
+
+    @Test(dataProvider = "negativeDataForTask4", expectedExceptions = TasksException.class)
+    void negativeTestForTask4(String number) {
+        Task4.outputWordOrNumber(number);
     }
 }

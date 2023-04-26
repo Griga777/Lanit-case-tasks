@@ -18,7 +18,7 @@ public class Main {
         Task4.outputWordOrNumber("10");
         System.out.println("======================");
 
-        int[] values = {8, 22, 12};
+        Integer[] values = {8, 22, 12};
         System.out.println(Task5.returnNearestNumber(values));
         System.out.println("======================");
 

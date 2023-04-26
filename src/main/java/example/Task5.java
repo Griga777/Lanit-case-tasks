@@ -7,7 +7,7 @@ import java.util.List;
 //Реализовать функцию, которая для данного массива целых чисел(Integer) возвращает число наиболее близкое к 10,
 //если таких чисел два(н-р 8,12) то возвращать больше из них
 public class Task5 {
-    public static int returnNearestNumber(int[] numbers) {
+    public static Integer returnNearestNumber(Integer[] numbers) {
         int min = Integer.MAX_VALUE;
         int desiredNumber = 10;
 
