@@ -1,6 +1,7 @@
 package example;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -11,6 +12,7 @@ public class Task5 {
         int min = Integer.MAX_VALUE;
         int desiredNumber = 10;
 
+        Arrays.sort(numbers);
         List<Integer> nearestNumber = new ArrayList<>();
         for (Integer number : numbers) {  // numbers: {8, 22, 12}
             int diff = Math.abs(desiredNumber - number);  // diff = desiredNumber(10) - number(8) = 2

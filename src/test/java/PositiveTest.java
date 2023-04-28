@@ -90,17 +90,14 @@ public class PositiveTest {
     @DataProvider
     public Object[][] positiveDataForTask5() {
         return new Object[][]{
-                {new Integer[]{8, 22, 12}, 12},
-                {"0", "foobar"},
-                {"1", "1"},
-                {"-2147483648", "-2147483648"},
-                {"-2147483647", "-2147483647"},
-                {"2147483646", "foo"},
-                {"2147483647", "2147483647"},
-                {"-225", "foobar"},
-                {"9", "foo"},
-                {"1550", "bar"},
-                {"-17", "-17"}
+                {new Integer[]{0, 0}, 0},
+                {new Integer[]{-1, 1, 0}, 1},
+                {new Integer[]{10, 10}, 10},
+                {new Integer[]{9, 11, 22}, 11},
+                {new Integer[]{-2147483648, -2147483647, 2147483647, 2147483646}, 2147483646},
+                {new Integer[]{5, 7, 3}, 7},
+                {new Integer[]{256, 128, 1024}, 128},
+                {new Integer[]{-30, -50, -25900, -1005, -99}, -30}
         };
     }
 
