@@ -2,7 +2,9 @@ import example.*;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
+import java.util.NoSuchElementException;
+
+import static org.testng.Assert.assertThrows;
 
 public class NegativeTest {
 
@@ -69,5 +71,18 @@ public class NegativeTest {
     @Test(dataProvider = "negativeDataForTask4", expectedExceptions = TasksException.class)
     void negativeTestForTask4(String number) {
         Task4.outputWordOrNumber(number);
+    }
+
+    @DataProvider
+    public Object[][] negativeDataForTask5() {
+        return new Object[][]{
+                {new Integer[]{10, null, 11}},
+                {new Integer[]{null, null}}
+        };
+    }
+
+    @Test(dataProvider = "negativeDataForTask5")
+    void negativeTestForTask5(Integer[] numbers) {
+        assertThrows(NullPointerException.class, () -> Task5.returnNearestNumber(numbers));
     }
 }
