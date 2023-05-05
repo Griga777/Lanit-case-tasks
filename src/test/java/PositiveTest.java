@@ -106,5 +106,22 @@ public class PositiveTest {
         Integer result = Task5.returnNearestNumber(numbers);
         Assert.assertEquals(result, resultProvider);
     }
+
+    @DataProvider
+    public Object[][] positiveDataForTask6() {
+        return new Object[][]{
+                {"лето", "лето"},
+                {"claSS", "SSalc"},
+                {"Футбол", "лобтуФ"},
+                {"Это НОВЫЙ тестик", "Это ЙЫВОН китсет"},
+                {"I like PIZZA", "I like AZZIP"}
+        };
+    }
+
+    @Test(dataProvider = "positiveDataForTask6")
+    void positiveTestForTask6(String s, String resultProvider) {
+        String result = Task6.returnModifiedString(s);
+        Assert.assertEquals(result, resultProvider);
+    }
 }
 

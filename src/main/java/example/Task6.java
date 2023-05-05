@@ -6,6 +6,12 @@ package example;
 public class Task6 {
     public static String returnModifiedString(String s) { // s -> "Это новый тестик"
         int wordLength = 5;
+        if (s.equals("")) {
+            throw new TasksException("Строка не должна быть пустой");
+        }
+        if (!(s.matches("[a-zA-Zа-яёА-ЯЁ ]+"))) {
+            throw new TasksException("В строке должны быть только буквы и пробелы");
+        }
         String[] words = s.split(" "); // words -> {"Это", "новый", "тестик"}
         StringBuilder newStr = new StringBuilder();
 

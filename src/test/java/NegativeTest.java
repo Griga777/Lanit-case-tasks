@@ -85,4 +85,19 @@ public class NegativeTest {
     void negativeTestForTask5(Integer[] numbers) {
         assertThrows(NullPointerException.class, () -> Task5.returnNearestNumber(numbers));
     }
+
+    @DataProvider
+    public Object[][] negativeDataForTask6() {
+        return new Object[][]{
+                {""},
+                {"1234567890"},
+                {"+/-;.!~`&%#@?,_*(.):№$^"},
+                {"Это ЦИФРА 9"}
+        };
+    }
+
+    @Test(dataProvider = "negativeDataForTask6", expectedExceptions = TasksException.class)
+    void negativeTestForTask6(String s) {
+        Task6.returnModifiedString(s);
+    }
 }
