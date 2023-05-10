@@ -123,5 +123,22 @@ public class PositiveTest {
         String result = Task6.returnModifiedString(s);
         Assert.assertEquals(result, resultProvider);
     }
+
+    @DataProvider
+    public Object[][] positiveDataForTask7() {
+        return new Object[][]{
+                {100, 1},
+                {101, 2},
+                {998, 26},
+                {999, 27},
+                {159, 15}
+        };
+    }
+
+    @Test(dataProvider = "positiveDataForTask7")
+    void positiveTestForTask7(int n, int resultProvider) {
+        Integer result = Task7.calculateSumDigitsThreeDigitNumber(n);
+        Assert.assertEquals(result, resultProvider);
+    }
 }
 

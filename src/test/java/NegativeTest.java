@@ -100,4 +100,20 @@ public class NegativeTest {
     void negativeTestForTask6(String s) {
         Task6.returnModifiedString(s);
     }
+
+    @DataProvider
+    public Object[][] negativeDataForTask7() {
+        return new Object[][]{
+                {-100},
+                {0},
+                {1},
+                {99},
+                {1000}
+        };
+    }
+
+    @Test(dataProvider = "negativeDataForTask7", expectedExceptions = TasksException.class)
+    void negativeTestForTask7(int n) {
+        Task7.calculateSumDigitsThreeDigitNumber(n);
+    }
 }
