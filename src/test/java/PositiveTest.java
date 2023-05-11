@@ -67,22 +67,22 @@ public class PositiveTest {
     @DataProvider
     public Object[][] positiveDataForTask4() {
         return new Object[][]{
-                {"-1", "-1"},
-                {"0", "foobar"},
-                {"1", "1"},
-                {"-2147483648", "-2147483648"},
-                {"-2147483647", "-2147483647"},
-                {"2147483646", "foo"},
-                {"2147483647", "2147483647"},
-                {"-225", "foobar"},
-                {"9", "foo"},
-                {"1550", "bar"},
-                {"-17", "-17"}
+                {-1, "-1"},
+                {0, "foobar"},
+                {1, "1"},
+                {-2147483648, "-2147483648"},
+                {-2147483647, "-2147483647"},
+                {2147483646, "foo"},
+                {2147483647, "2147483647"},
+                {-225, "foobar"},
+                {9, "foo"},
+                {1550, "bar"},
+                {-17, "-17"}
         };
     }
 
     @Test(dataProvider = "positiveDataForTask4")
-    void positiveTestForTask4(String number, String resultProvider) {
+    void positiveTestForTask4(Integer number, String resultProvider) {
         String result = Task4.outputWordOrNumber(number);
         Assert.assertEquals(result, resultProvider);
     }

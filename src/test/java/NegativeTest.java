@@ -60,16 +60,12 @@ public class NegativeTest {
     @DataProvider
     public Object[][] negativeDataForTask4() {
         return new Object[][]{
-                {""},
-                {"один"},
-                {"-five"},
-                {"2147483648"},
-                {"-2147483649"}
+                {null}
         };
     }
 
     @Test(dataProvider = "negativeDataForTask4", expectedExceptions = TasksException.class)
-    void negativeTestForTask4(String number) {
+    void negativeTestForTask4(Integer number) {
         Task4.outputWordOrNumber(number);
     }
 
