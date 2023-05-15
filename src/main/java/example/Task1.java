@@ -18,6 +18,7 @@ public class Task1 {
         if (value1 > Integer.MAX_VALUE || value1 < Integer.MIN_VALUE || value2 > Integer.MAX_VALUE || value2 < Integer.MIN_VALUE) {
             throw new TasksException("Превышен порог значений");
         }
-        return String.format("%.3f", Math.max(value1, value2));
+//        return String.format("%.3f", Math.max(value1, value2)); // 1 вариант
+        return String.format("%.3f", (value1 + value2 + Math.abs(value1 - value2)) / 2); // 2 вариант
     }
 }

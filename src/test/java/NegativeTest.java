@@ -2,8 +2,6 @@ import example.*;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.util.NoSuchElementException;
-
 import static org.testng.Assert.assertThrows;
 
 public class NegativeTest {
