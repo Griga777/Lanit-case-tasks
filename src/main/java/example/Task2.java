@@ -20,9 +20,9 @@ public class Task2 {
         }
 
         // Пример для a = 9, b = 4
-        a = a - b; // a = 9 - 4 = 5 - разница м/у 9 и 4
-        b = a + b; // b = 5 + 4 = 9
-        a = b - a; // a = 9 - 5 = 4
+        a = a + b; // a = 9 + 4 = 13 - сумма 9 и 4
+        b = a - b; // b = 13 - 4 = 9
+        a = a - b; // a = 13 - 9 = 4
         return new String[]{String.valueOf(a), String.valueOf(b)};
     }
 }

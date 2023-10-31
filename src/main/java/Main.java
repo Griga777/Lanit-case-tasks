@@ -27,5 +27,8 @@ public class Main {
 
         Task7.calculateSumDigitsThreeDigitNumber(159);
         System.out.println("======================");
+
+        System.out.println(Task8.removeDuplicateSymbols("Hello Word of Tanks"));
+        System.out.println("======================");
     }
 }

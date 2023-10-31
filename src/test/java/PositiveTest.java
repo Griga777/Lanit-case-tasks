@@ -97,7 +97,8 @@ public class PositiveTest {
                 {new Integer[]{-2147483648, -2147483647, 2147483647, 2147483646}, 2147483646},
                 {new Integer[]{5, 7, 3}, 7},
                 {new Integer[]{256, 128, 1024}, 128},
-                {new Integer[]{-30, -50, -25900, -1005, -99}, -30}
+                {new Integer[]{-30, -50, -25900, -1005, -99}, -30},
+                {new Integer[]{Integer.MIN_VALUE, Integer.MIN_VALUE + 1}, Integer.MIN_VALUE + 1}
         };
     }
 
